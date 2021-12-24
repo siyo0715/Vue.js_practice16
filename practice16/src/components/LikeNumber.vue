@@ -8,7 +8,14 @@
 <script>
   export default {
     props: {
-      totalNumbe: Number
+      totalNumber: {
+        type: Number,
+        default: function(){
+          return{
+            number:5
+          }
+        }
+      }
     },
     computed:{
       halfNumber(){
