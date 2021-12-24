@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>いいね{{ halfNumber }}</h2>
-    <button @click="increment">+1</button>
+    <button @click="increment">変化する</button>
   </div>
 </template>
 
@@ -16,15 +16,16 @@
     //       type: String
     //   }
     // },
-    props: ["totalNumber","testProps"],
+    props: ["totalNumber"],
     computed:{
       halfNumber(){
         return this.totalNumber / 2
       }
     },
     methods: {
-        increment(){
-          this.number += 1;
+        increment() {
+          // this.number += 1;
+          this.$emit("my-click", this.totalNumber + 1);
         }
     }
   };
