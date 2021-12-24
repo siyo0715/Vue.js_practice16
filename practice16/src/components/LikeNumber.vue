@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>いいね{{ totalNumber / 2 }}</h2>
+    <h2>いいね{{ halfNumber }}</h2>
     <button @click="increment">+1</button>
   </div>
 </template>
@@ -8,6 +8,11 @@
 <script>
   export default {
     props: ["totalNumber"],
+    computed:{
+      halfNumber(){
+        return this.totalNumber / 2
+      }
+    },
     methods: {
         increment(){
           this.number += 1;
