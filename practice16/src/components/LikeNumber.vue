@@ -7,16 +7,16 @@
 
 <script>
   export default {
-    props: {
-      totalNumber: {
-        type: Number,
-        default: function(){
-          return{
-            number:5
-          }
-        }
-      }
-    },
+    // props: {
+    //   totalNumber: {
+    //     type: Number,
+    //     default: 10
+    //     },
+    //     testProps: {
+    //       type: String
+    //   }
+    // },
+    props: ["totalNumber","testProps"],
     computed:{
       halfNumber(){
         return this.totalNumber / 2
