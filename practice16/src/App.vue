@@ -1,6 +1,6 @@
 <template>
   <div>
-    <like-header></like-header>
+    <LikeHeader></LikeHeader>
     <LikeNumber></LikeNumber>
   </div>
 </template>
